@@ -1,1 +1,1 @@
-Sitemap: https://meyappan.com/sitemap.xml
+Sitemap: https://meysubb.github.io/personal_site/sitemap.xml
