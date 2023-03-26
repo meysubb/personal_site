@@ -4,7 +4,7 @@ project:
 
 website:
   title: "Meyappan Subbaiah"
-  site-url: https://meysubb.github.io/personal_site
+  site-url: meyappan.com
   repo-url: https://github.com/meysubb/personal_site
   description: "This is Meyappans personal Blog."
   navbar:
