@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.247">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Meyappan Subbaiah">
+<meta name="dcterms.date" content="2018-02-11">
+<meta name="description" content="Weather Viz in R">
+
+<title>Meyappan Subbaiah - Tri-Cities, WA weatheR</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-90700102-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Meyappan Subbaiah</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Meyappan</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/meysubb"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/msubbaiah1"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Tri-Cities, WA weatheR</h1>
+                  <div>
+        <div class="description">
+          Weather Viz in R
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Data Viz</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Meyappan Subbaiah </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 11, 2018</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#average-temperature" id="toc-average-temperature" class="nav-link active" data-scroll-target="#average-temperature">Average Temperature</a>
+  <ul class="collapse">
+  <li><a href="#tufte-themed-weather-plot" id="toc-tufte-themed-weather-plot" class="nav-link" data-scroll-target="#tufte-themed-weather-plot">Tufte Themed Weather Plot</a></li>
+  </ul></li>
+  <li><a href="#snow" id="toc-snow" class="nav-link" data-scroll-target="#snow">Snow</a></li>
+  <li><a href="#precipitation" id="toc-precipitation" class="nav-link" data-scroll-target="#precipitation">Precipitation</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>I knew when moving to Washington/the Tri-cities that while this was going to be the furthest north I had ever lived, it was also a desert. Thank god for the warmth. I interned up here in the summer of 2015, and had been up here for a week or two in the winter. However, I had never experienced a full Washington winter.</p>
+<p>With my luck, this winter was the “worst” winter in 20 some odd years. Or so everyone claimed. A lot of people claimed that it was bad because it never warmed up fast enough for the snow to melt off. Oh you are damn right it didn’t. On top of that, right as the snow would melt off we would get more. I had to buy SNOW BOOTS to keep my feet warm outside.</p>
+<p>In early January, I decided I was going to validate these claims about it being one of the worst winters in the Tri-Cities. This had almost slipped my mind, but thankfully a few other rweekly posts reminded me that I needed to finish this. Let’s take a look.</p>
+<p>Note: For weather data see either the NCDC or CDIAC (ORNL).</p>
+<ul>
+<li><a href="#average-temperature">Average Temperature</a>
+<ul>
+<li><a href="#tufte-themed-weather-plot">Tufte Themed Weather Plot</a></li>
+</ul></li>
+<li><a href="#snow">Snow</a></li>
+<li><a href="#precipitation">Precipitation</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<section id="average-temperature" class="level2">
+<h2 class="anchored" data-anchor-id="average-temperature">Average Temperature</h2>
+<p>Here is the temperature distribution and how it has changed over the last four years.</p>
+<p><img src="temp_dist-1.png" class="img-fluid"></p>
+<p>So looking at the past few years up until 2016, there is a gradual decrease near the end of the year into the winter months. However, this past year it seems that there has been a drastic temperature drop into the winter months. It’s also important to note that it was warm for a bit longer than normal.</p>
+<p>I’ve thought a few times about plotting the average temperatures per month, over the course of the last 4 years. Sadly that would be misleading. Since the Tri-Cities is in a desert, the temperature drops drastically once the sun sets. We can however look at the average temperature difference per month.</p>
+<p><img src="delta_t-1.png" class="img-fluid"></p>
+<p>In the last two years there has been a drastic drop in temperature swings from September to November. However from 2013 to 2014, the temperature swings took gradual drops from September onwards.</p>
+<p>I am not claiming to be a meteorologist, but it is well known that during the winter months, there is a shorter period of sunlight. Thus, it intuitively makes sense for there to be a smaller temperature difference during the winter months than the rest of the year.</p>
+<section id="tufte-themed-weather-plot" class="level3">
+<h3 class="anchored" data-anchor-id="tufte-themed-weather-plot">Tufte Themed Weather Plot</h3>
+<p>Edward Tufte is famous for his work in data visualization. If you haven’t heard of him, I suggest checking his work out. You’ll see very shortly why his work is great.</p>
+<p>In my search for how to visualize these weather plots, I ran into <a href="https://rpubs.com/bradleyboehmke/weather_graphic">Brad Boehmke’s</a> work on replicating a Tufte visualization. This was extremely helpful in replicating the tufte plots.</p>
+<p><img src="tuft_plot-1.png" class="img-fluid"></p>
+<p>Well, look at that. I’m not really sure if there is much for me to say since the plot does most of the talking. I can’t stress enough the importance of reading a LEGEND. DO IT!</p>
+</section>
+</section>
+<section id="snow" class="level2">
+<h2 class="anchored" data-anchor-id="snow">Snow</h2>
+<p>To think I was looking forward to the snow when I first moved up here. It’s not fun to deal with, especially when a lot of snow is on the ground.</p>
+<p>These heatmaps were inspired by <a href="https://rud.is/b/2017/04/01/r%E2%81%B4-snow-day-facets/">Bob Rudis’s</a> work.</p>
+<p><img src="all_snow-1.png" class="img-fluid"></p>
+<p>Well looks like the snowfall this past winter was unprecedented. The last time we received a similar snowfall was in the 80’s.</p>
+<p>Note: I’ve double checked some of the years in between to see whether there was any snowfall. I haven’t checked every single year, but am under the assumption that the data sources are correct.</p>
+<p><img src="sel_snow-1.png" class="img-fluid"></p>
+<p>Well as of ’06, it seems like there has been snowfall every winter (excluding 2013). There has been less than 5 inches of snow per month from ’12 onwards.</p>
+<p><img src="bar_snow-1.png" class="img-fluid"></p>
+<p>The above plot provides a little bit more detail and shows us the total snowfall in the Fall and Winter of respective years. That about sums it up, this was the worst winter in terms of total snowfall accumulated.</p>
+<p>Note: December of the previous year is considered in the Winter of the next year. For example December 2014 is part of the 2015 Winter (Dec ’14, Jan ’15, and Feb ’15).</p>
+</section>
+<section id="precipitation" class="level2">
+<h2 class="anchored" data-anchor-id="precipitation">Precipitation</h2>
+<p>I have the precipitation data and am a little curious to see how much rain we actually get. I felt like it rained a bit more than I expected this past year. Let’s see.</p>
+<p><img src="all_rain-1.png" class="img-fluid"></p>
+<p>Well the Tri-cities really do live up to the hype of being a desert. Less than 10 inches of rain in 36 of the last 42 years. Thank god for the Columbia, Snake and Yakima rivers. It definitely keeps the area arable. The APPLES here are AMAZING. You must try one. Take that for great soil!</p>
+<p>Here is a short summary of the cumulative rainfall and how this past year stacks up historically.</p>
+<p><img src="cumu_rain-1.png" class="img-fluid"></p>
+<p>Well compared to previous years, it was a pretty wet one. 2016 ranks as the 8th wettest year dating back to 1975, and the 4th wettest dating back to 1998. Any year where the Tri-cities gets more than 10 inches of a year is definitely something to celebrate.</p>
+<p>For those of you wondering, why the East side of the state doesn’t get as much rain as the West side it’s because of the rain shadow (that’s what my friend told me at least) that the mountains create. If you ever get the chance to visit Washington, hopefully you get to visit both sides of the state. They are vastly different culturally and climatically.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>This isn’t an academic paper, but I definitely want to give a shout out to some posts I found online that were helpful.</p>
+<ul>
+<li><a href="https://rpubs.com/bradleyboehmke/weather_graphic">Brad Boehmke’s work</a></li>
+<li><a href="https://rud.is/b/2017/04/01/r%E2%81%B4-snow-day-facets/">Bob Rudis’s work</a></li>
+<li><a href="http://jkunst.com/r/how-to-weather-radials/">Joshua Kunst’s work</a></li>
+<li><a href="http://stackoverflow.com/questions/29974535/dates-with-month-and-day-in-time-series-plot-in-ggplot2-with-facet-for-years">SO Question</a></li>
+</ul>
+<p><a href="https://github.com/meysubb/WA_Weather_Analysis">R Code</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
