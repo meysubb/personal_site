@@ -1,0 +1,19 @@
+---
+title: "Meyappan"
+image: profile.jpg
+about:
+  template: trestles
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/msubbaiah1
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/msubbaiah/
+    - icon: github
+      text: Github
+      href: https://github.com/meysubb
+---
+
+
+About this blog

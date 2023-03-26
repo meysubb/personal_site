@@ -1,0 +1,129 @@
+---
+title: 'Heroku for Data'
+date:  '2019-03-14'
+categories: ['R', 'Python', 'Heroku']
+description: 'Automate Tweets with Heroku'
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+Over the past few months, I've found myself relying on Heroku a lot! My two use cases for Heroku are (1) [Twitter bot](https://twitter.com/ChartsSec) posting about SEC basketball using ncaahoopR and (2) scraping both NCAA baseball and basketball data for use in a few different projects. \
+\
+If you find yourself running repetitive processes, I highly recommend using Heroku! I'll walk through both my projects and some useful tips I've learnt. \
+
+
+# Set-up Heroku
+
+Obviously, if you don't already have an account with Herkou set one up. It's free. It's also helpful to have their CLI set up, the \[instructions\](https://devcenter.heroku.com/articles/heroku-cli) on their website are pretty straight forward to get you started. \
+\
+Whatever you push to your git repo is what will also be pushed to heroku after committing to git. But first let's figure out how to get our app started. You don't necessarily need to host apps on Heroku but can use it similar to a cron service if you'd like. \
+\
+A note Heroku is an ephemeral system. What this means is the files you create/scrape will not last long on the server. What you can do in this instance is save to Dropbox/Drive/S3 whatever service you like. \
+
+```{bash, eval=F}
+heroku login
+```
+
+\
+**First Steps** \
+Before creating the application, we need to ensure that the following \
+\
+**Setting up ENV variables** \
+If you plan to set up a Twitter bot or scrape data and save to an external drive (like Dropbox). You'll definitely need to use an API. These API's will give you tokens. Naturally, there is concern to save these publicly in a git repo. Heroku provides an easily solution to avoid this. They have **config vars**, essentially environment variables. \
+\
+These can be set up via the command line or the GUI interface. For [instructions](https://devcenter.heroku.com/articles/config-vars), again heroku does a great job. \
+\
+These variables can then be accessed via either R or Python scripts. Just use `os.environ['ENV']` or `Sys.getenv('ENV')`, for python and R respectively. \
+\
+**Initial Setup** \
+Heroku relies on build-packs to provide the capability to compile different programming languages. The R build-pack is made for a specific stack `heroku-16`. The following steps are required to get R setup and running.
+
+\
+**R**
+
+```{bash,eval=FALSE}
+heroku create
+heroku stack:set 'heroku-16'
+heroku buildpacks:set https://github.com/virtualstaticvoid/heroku-buildpack-r.git#heroku-16
+```
+
+**Python** \
+You don't really need to do much in terms of setting a stack or build-pack for Python. Heroku handled them on its own, was able to identify python based on scripts.
+
+```{bash,eval=FALSE}
+heroku create
+```
+
+\
+**Required Files**\
+\
+**PYTHON**\
+If you are using Python, expect to include a `requirements.txt` file and a `runtime.txt` file. If the `runtime.txt` file is missing, Heroku will default to Python 3. If you intend to use Python 2, specify a `runtime.txt` file.\
+\
+**R**\
+For R, an `init.R` file is necessary with details of the packages you will be using. A quick snapshot of my `init.R` file looks like this:
+
+```{r, eval=FALSE}
+my_packages <- c("dplyr","ggplot2","rtweet","lubridate",'rvest','tidyr','devtools')
+install_if_missing <- function(p) {
+  if(p %in% rownames(installed.packages())==FALSE){
+    install.packages(p)}
+}
+
+invisible(sapply(my_packages, install_if_missing))
+
+dev_packages <- c("lbenz730/ncaahoopR","jflancer/bigballR")
+
+dev_install <- function(p){
+  devtools::install_github(p)
+}
+
+invisible(sapply(dev_packages,dev_install))
+```
+
+\
+I'm installing packages from both CRAN as well as github.
+
+\
+**Build APP**\
+Once you are done setting all of this up, run this command to get your files up to heroku.
+
+```{bash,eval=FALSE}
+git push heroku master
+```
+
+\
+At this point, it will start building up your app. Note there are some free limits in terms of size and usage. \
+\
+**Heroku Scheduler** \
+Here is the magic of getting scripts to run periodically. Heroku has various different add-ons, one of which is Heroku Scheduler. \
+\
+Once you add the Scheduler. You go ahead and click on it and provide a bash command to run whatever script you would like. \
+**R**
+
+```{bash, eval=FALSE}
+Rscript app/script.R
+```
+
+**Python**
+
+```{bash, eval=FALSE}
+python app/script.py
+```
+
+\
+Then select the frequency in which these should be run in the drop-down and you should be set. For further details on heroku scheduler, see this [link](https://devcenter.heroku.com/articles/scheduler)\
+\
+Note: to set up Heroku add-on's you have to provide cc info. However, they also provide estimates of costs. In my experience small daily tasks (like tweeting or grabbing data) have not run up a bill in the last 3-6 months that I have been using the service. \
+\
+**R and Python Set-up**\
+I used R, to build a Twitter Bot, focusing on SEC basketball. Maybe next year the content will be more rich. For this year, it was just game information and the WP charts that were automated. All other content was hand curated. \
+\
+[R + Twitter Bot Repo](https://github.com/meysubb/SEC_Twitter)\
+[Python + NCAA Baseball Data](https://github.com/meysubb/NCAAB_Scrapper)\
+\
+As you can see nothing has really changed in the code except for maybe the paths. In all honestly the paths I could use something like `os.join`, for python, and something similar in R to avoid the whole app directory situation. Heroku put's all of the code in your repo under the app folder of the dyno. \
+\

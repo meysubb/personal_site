@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "Meyappan Subbaiah"
+  site-url: https://meysubb.github.io
+  description: "This is Meyappans personal Blog."
+  navbar:
+    right:
+      - text: Meyappan
+        href: about.qmd
+      - text: Posts
+        href: index.qmd
+      - icon: github
+        href: https://github.com/meysubb
+      - icon: twitter
+        href: https://twitter.com/msubbaiah1
+  google-analytics: UA-90700102-1
+
+
+format:
+  html:
+    theme: theme.scss
+
+editor: visual
+

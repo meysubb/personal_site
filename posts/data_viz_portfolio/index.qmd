@@ -1,0 +1,59 @@
+---
+title: 'Data Viz Portfolio'
+date: '2023-01-01'
+date-modified: "2023-02-01"
+categories: ['Data Viz', 'R']
+description: 'Just a place to showcase and get better at data-viz'
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+image: 'wnba_shot_profile/stewie.png'
+---
+
+Just wanted to share some data visualizations, I've created. 
+
+## SOFIFA League Viz (Feb 2023)
+
+![](https://raw.githubusercontent.com/meysubb/Viz_Portfolio/main/sofifa_plot/Ligue%201.png)
+
+![](https://raw.githubusercontent.com/meysubb/Viz_Portfolio/main/sofifa_plot/Indian%20Super%20League.png)
+
+[Reproducible R Code.](https://github.com/meysubb/Viz_Portfolio/blob/main/sofifa_plot/league_fifa_beeswarm.R)
+
+## WNBA Shot-Chart viz (Jan 2023)
+
+![](wnba_shot_profile/stewie.png)
+
+![](wnba_shot_profile/candace_parker.png)
+
+![](wnba_shot_profile/jonequel_jones.png)
+
+Reproducible Code: To be shared
+
+## Austin Airport Data (2017)
+
+Studying delay patterns out of Austin-Bergstorm.
+
+![](Austin_Geo_Viz_3.png)
+
+![](Austin_Airport_Viz_4.png)
+
+
+[Reproducible R Code.](https://github.com/meysubb/Viz_Portfolio/blob/master/R_Script/Austin_Flights_Script.R)
+
+## Properties Viz (2017)
+
+![](Green_Properties_Viz_2.png)
+
+Comparing green (eco-friendly) properties vs regular properties with respect to the different types of buildings (class). Classes are linked with the age of the property.
+
+[Reproducible R Code](https://github.com/meysubb/Viz_Portfolio/blob/master/R_Script/Green_Buildings_Viz_2_Script.R)
+
+
+## Cars Viz (2017)
+
+![](Cars_Viz_1.png)
+ 
+[Reproducible R Code](https://github.com/meysubb/Viz_Portfolio/blob/master/R_Script/Cars_Viz_1_Script.R)

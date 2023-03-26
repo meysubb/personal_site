@@ -1,0 +1,126 @@
+---
+title: 'SEC non-conference play'
+date: '2018-01-11'
+categories: ['R', 'college basketball']
+description: "Let's take a look around the SEC and how everyone's non-conference schedule played out"
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+## SEC Schedule
+
+
+<iframe class="huge" src="highchart.html"
+    style="max-width = 100%"
+    sandbox="allow-same-origin allow-scripts"
+    width="100%"
+    height="600"
+    scrolling="no"
+    seamless="seamless"
+    frameborder="0">
+</iframe>
+
+The above chart should provide enough details about schedules and team results during the non-conference schedule. Let's take a look at the pace of the SEC.
+
+## Pace
+
+
+Let's see what pace tell us about the SEC. Here is a look at the points per possession and defensive points per possession. There is no true dominant team on both sides of the ball. It looks as though the SEC will truly be a toss-up this year.
+
+![](unnamed-chunk-2-1.png)
+
+Even though no one stands out at the end of non-conference play that could be a result of various factors from injuries, suspensions, type of opponents faced, etc. It'll definitely evolve as we move on through the season. Now let's check out how teams are shooting!
+
+## Shooting
+
+
+![](unnamed-chunk-3-1.png)
+
+I'm a bit surprised at Kentucky's low 3 point attempt rate to start the season. Definitely some concern for South Carolina and Vandy as they struggled to shoot (eFG below 50%) in non-conference play.
+
+## Usage Rate
+
+<iframe class="huge" src="usg_player.html"
+    style="max-width = 100%"
+    sandbox="allow-same-origin allow-scripts"
+    width="100%"
+    height="600"
+    scrolling="no"
+    seamless="seamless"
+    frameborder="0">
+</iframe>
+
+Collin Sexton is a unique talent, and it definitely can be seen here. His usage rate doesn't seem to dip with more minutes. Additionally, one of the many freshman (TJ Starks) on the Aggie roster is making the most of his limited playing time. Note I've filtered out players who played less than 40 minutes.
+
+Go ahead and look through for your team's players.
+
+Let's dig a little bit deeper and take a look at each individual team. Let's look at where the Offense come from?
+
+I've been working on developing assist maps for a while now, but would like to give a shout out to the Yale Sports Group. These assist maps were based of theirs.
+
+Just a few quick takeaways:  
+      \* Sexton ranks 3rd for weighted assists on Alabama, was thinking he'd be higher.  
+      \* Florida's offense unsurprisingly runs through Chiozza  
+      \* MSU's offense seems dependent on Weatherspoon (Guess he's good? I don't watch much MSU)  
+
+### Alabama
+
+![](unnamed-chunk-5-1.png)
+
+### Arkansas
+
+![](unnamed-chunk-6-1.png)
+
+### Auburn
+
+![](unnamed-chunk-7-1.png)
+
+### Florida
+
+![](unnamed-chunk-8-1.png)
+
+### Georgia
+
+![](unnamed-chunk-9-1.png)
+
+### Kentucky
+
+![](unnamed-chunk-10-1.png)
+
+### LSU
+
+![](unnamed-chunk-11-1.png)
+
+### Mississippi State
+
+![](unnamed-chunk-12-1.png)
+
+### Missouri
+
+![](unnamed-chunk-13-1.png)
+
+### Ole Miss
+
+![](unnamed-chunk-14-1.png)
+
+### South Carolina
+
+![](unnamed-chunk-15-1.png)
+
+### Tennessee
+
+![](unnamed-chunk-16-1.png)
+
+### Texas A&M
+
+![](unnamed-chunk-17-1.png)
+
+### Vanderbilt
+
+
+![](unnamed-chunk-18-1.png)

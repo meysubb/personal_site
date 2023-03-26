@@ -1,0 +1,59 @@
+---
+title: 'College Shiny Apps'
+date: '2016-03-03'
+date-modified: "2019-04-03"
+categories: ['Shiny', 'R', 'college basketball', 'college baseball']
+description: 'Shiny apps visualizing March Madness/CWS'
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+image: 'MarchMadness.jpg'
+---
+
+NCAA Shiny Apps
+
+## March Madness
+
+For those of you that love filling out NCAA brackets, have you ever struggled to fill out a bracket? Unless you religiously watch college basketball, there is a high chance that you haven't seen every team play. It is even more difficult to predict matchups continuoulsy compare stats between set matchups and potential matchups.
+
+I wanted to avoid constantly jumping from website to website. So I went ahead and spent a little time developing an application, that allows team-team comparison for the tournament this year. This application has data for all tournament teams and will allow you to cross-compare teams and players.  
+
+You can compare teams based on different stats, and even look at individual players or compare the team as a whole.
+
+2019/2018: Create a similarity index for teams too
+2017: Data updated for games played until 3/15/2017.      
+2016: Additionally, I’ve got every team’s schedule (except for games played on 3/13/2016) and a separate tab that has a picture of the current bracket.      
+
+
+### Application Links
+
+[2018-19: NCAA March Madness](https://meysubb.shinyapps.io/March_Madness_Dashboard/)  
+
+![](march_viz_1.png)
+![](march_viz_2.png)
+![](march_viz_3.png)
+
+[2017-18: NCAA March Madness](https://meysubb.shinyapps.io/gameapp/)  
+[2016-17: NCAA March Madness](https://meysubb.shinyapps.io/2017_marchmadness/)    
+[2015-16: NCAA March Madness](https://meysubb.shinyapps.io/NCAAB/)     
+
+Note: Older versions are not hosted anymore, see github for code.
+
+### Source Code - March Madness
+
+[Shiny Apps Source Code](https://github.com/meysubb/NCAAB_projects)
+
+
+## College World Series 
+
+### Application Link
+
+[2019 CWS App](https://meysubb.shinyapps.io/cws-d1/)
+
+![](cws_app.png)
+
+### Source Code - CWS
+
+[Shiny Apps Source Code](https://github.com/meysubb/College_Baseball_Study/tree/master/2019/CWS_App)
