@@ -32,5 +32,9 @@
       "/posts/tamu_baseball/index.html",
       "/posts/march_madness/index.html"
     ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": []
   }
 ]

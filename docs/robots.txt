@@ -1,1 +1,1 @@
-Sitemap: meyappan.com/sitemap.xml
+Sitemap: www.meyappan.com/sitemap.xml
