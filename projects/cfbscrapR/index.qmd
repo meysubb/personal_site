@@ -1,0 +1,20 @@
+---
+title: "cfbscrapR"
+subtitle: "College Football Data access package with built in EPA/WPA Models."
+author: 
+  - "Meyappan Subbaiah"
+date: "2019-08-05"
+categories: [R, R-package, cfbscrapR]
+---
+
+This project was inspired by my love for CFB, and also inspired by the EPA/WPA models provided in nflscrapR by Ron Yurko et al. 
+
+This package is now archived. Access to cfb data can be found in [cfbfastR](https://cfbfastr.sportsdataverse.org/).
+
+Huge S/O to [CFB_Data](https://collegefootballdata.com/) for making college play by play data accessible to everyone. 
+
+
+-  [Archived R Package](https://github.com/meysubb/cfbscrapR-archived)
+
+-  [EPA/WPA Models Misc](https://github.com/meysubb/cfbscrapR-MISC)
+

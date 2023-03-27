@@ -1,13 +1,19 @@
 ---
-title: "Posts"
-listing:
-  contents: posts/**/*.qmd
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  fields: [image, date, title, reading-time, description, categories]
-page-layout: full
-title-block-banner: false
+title: "Meyappan"
+image: profile.jpg
+about:
+  template: trestles
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/msubbaiah1
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/msubbaiah/
+    - icon: github
+      text: Github
+      href: https://github.com/meysubb
 ---
+
+
+About this blog

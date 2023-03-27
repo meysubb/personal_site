@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/cfbscrapR/index.html"
+    ]
+  },
+  {
     "listing": "/archive.html",
     "items": [
       "/posts/data_viz_portfolio/index.html",
@@ -17,7 +23,7 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/posts.html",
     "items": [
       "/posts/data_viz_portfolio/index.html",
       "/posts/get-started-heroku/index.html",
@@ -32,9 +38,5 @@
       "/posts/tamu_baseball/index.html",
       "/posts/march_madness/index.html"
     ]
-  },
-  {
-    "listing": "/projects.html",
-    "items": []
   }
 ]

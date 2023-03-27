@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Meyappan Subbaiah - Archive</title>
+<title>Meyappan Subbaiah - Posts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -125,7 +125,7 @@ ga('send', {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html">
+    <a class="nav-link active" href="./posts.html" aria-current="page">
  <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
@@ -156,13 +156,15 @@ ga('send', {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Data Viz">Data Viz <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Heroku">Heroku <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="college baseball">college baseball <span class="quarto-category-count">(3)</span></div><div class="category" data-category="college basketball">college basketball <span class="quarto-category-count">(3)</span></div><div class="category" data-category="college football">college football <span class="quarto-category-count">(3)</span></div><div class="category" data-category="python">python <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Archive</h1>
+<h1 class="title">Posts</h1>
 </div>
 
 
@@ -182,8 +184,33 @@ ga('send', {
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="Data Viz,R" data-listing-date-sort="1672549200000" data-listing-file-modified-sort="1678069865477" data-listing-reading-time-sort="0.335">
+<div class="thumbnail">
+<p><a href="./posts/data_viz_portfolio/index.html"> <img src="./posts/data_viz_portfolio/wnba_shot_profile/stewie.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/data_viz_portfolio/index.html">
 <h3 class="no-anchor listing-title">
@@ -193,16 +220,39 @@ Data Viz Portfolio
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data Viz'); return false;">
+Data Viz
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+</div>
+<a href="./posts/data_viz_portfolio/index.html">
+<div class="listing-description">
+<p>Just a place to showcase and get better at data-viz</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/data_viz_portfolio/index.html">
 <div class="listing-date">
 Jan 1, 2023
 </div>
+<div class="listing-reading-time">
+0 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="1" data-categories="R,Python,Heroku" data-listing-date-sort="1552536000000" data-listing-file-modified-sort="1676916680111" data-listing-reading-time-sort="3.805">
+<div class="thumbnail">
+<a href="./posts/get-started-heroku/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/get-started-heroku/index.html"></a></p>
+</div>
 <div class="body">
 <a href="./posts/get-started-heroku/index.html">
 <h3 class="no-anchor listing-title">
@@ -212,16 +262,38 @@ Heroku for Data
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
+Python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Heroku'); return false;">
+Heroku
+</div>
+</div>
+<a href="./posts/get-started-heroku/index.html">
+<div class="listing-description">
+<p>Automate Tweets with Heroku</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/get-started-heroku/index.html">
 <div class="listing-date">
 Mar 14, 2019
 </div>
+<div class="listing-reading-time">
+3 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="2" data-categories="college basketball,R" data-listing-date-sort="1541912400000" data-listing-file-modified-sort="1678069910461" data-listing-reading-time-sort="9.37">
+<div class="thumbnail">
+<p><a href="./posts/mid_major_stock_exchange/index.html"> <img src="./posts/mid_major_stock_exchange/cost_cor.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/mid_major_stock_exchange/index.html">
 <h3 class="no-anchor listing-title">
@@ -231,16 +303,35 @@ Mid-Major Stock Exchange
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('college basketball'); return false;">
+college basketball
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+</div>
+<a href="./posts/mid_major_stock_exchange/index.html">
+<div class="listing-description">
+<p>Investing in CBB mid-major teams</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/mid_major_stock_exchange/index.html">
 <div class="listing-date">
 Nov 11, 2018
 </div>
+<div class="listing-reading-time">
+9 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="3" data-categories="college baseball,R,python" data-listing-date-sort="1518325200000" data-listing-file-modified-sort="1678071186228" data-listing-reading-time-sort="5.15">
+<div class="thumbnail">
+<p><a href="./posts/sec_baseball_recap_2017/index.html"> <img src="./posts/sec_baseball_recap_2017/record_plots.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/sec_baseball_recap_2017/index.html">
 <h3 class="no-anchor listing-title">
@@ -250,16 +341,38 @@ SEC Baseball 2017 Recap
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('college baseball'); return false;">
+college baseball
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+</div>
+<a href="./posts/sec_baseball_recap_2017/index.html">
+<div class="listing-description">
+<p>Breaking down the 2017 baseball season for SEC teams</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/sec_baseball_recap_2017/index.html">
 <div class="listing-date">
 Feb 11, 2018
 </div>
+<div class="listing-reading-time">
+5 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="4" data-categories="R,Data Viz" data-listing-date-sort="1518325200000" data-listing-file-modified-sort="1678071595590" data-listing-reading-time-sort="4.81">
+<div class="thumbnail">
+<p><a href="./posts/weatheR/index.html"> <img src="./posts/weatheR/tuft_plot-1.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/weatheR/index.html">
 <h3 class="no-anchor listing-title">
@@ -269,16 +382,35 @@ Tri-Cities, WA weatheR
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data Viz'); return false;">
+Data Viz
+</div>
+</div>
+<a href="./posts/weatheR/index.html">
+<div class="listing-description">
+<p>Weather Viz in R</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/weatheR/index.html">
 <div class="listing-date">
 Feb 11, 2018
 </div>
+<div class="listing-reading-time">
+4 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="5" data-categories="R,college basketball" data-listing-date-sort="1515646800000" data-listing-file-modified-sort="1679265822122" data-listing-reading-time-sort="2.075">
+<div class="thumbnail">
+<p><a href="./posts/tamu_basketball/index.html"> <img src="./posts/tamu_basketball/unnamed-chunk-2-1.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/tamu_basketball/index.html">
 <h3 class="no-anchor listing-title">
@@ -288,16 +420,35 @@ SEC non-conference play
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('college basketball'); return false;">
+college basketball
+</div>
+</div>
+<a href="./posts/tamu_basketball/index.html">
+<div class="listing-description">
+<p>Let’s take a look around the SEC and how everyone’s non-conference schedule played out</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/tamu_basketball/index.html">
 <div class="listing-date">
 Jan 11, 2018
 </div>
+<div class="listing-reading-time">
+2 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="6" data-categories="college football,R,python" data-listing-date-sort="1513746000000" data-listing-file-modified-sort="1678070480417" data-listing-reading-time-sort="8.575">
+<div class="thumbnail">
+<p><a href="./posts/cfb_bowl_predictive/index.html"> <img src="./posts/cfb_bowl_predictive/Bowl_Var_Imp.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/cfb_bowl_predictive/index.html">
 <h3 class="no-anchor listing-title">
@@ -307,16 +458,42 @@ Jan 11, 2018
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('college football'); return false;">
+college football
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+</div>
+<a href="./posts/cfb_bowl_predictive/index.html">
+<div class="listing-description">
+<p>CFB Bowl Predictions</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/cfb_bowl_predictive/index.html">
 <div class="listing-date">
 Dec 20, 2017
 </div>
+<div class="listing-reading-time">
+8 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="7" data-categories="college football,R,python" data-listing-date-sort="1513746000000" data-listing-file-modified-sort="1678070830808" data-listing-reading-time-sort="10.96">
+<div class="thumbnail">
+<a href="./posts/cfb_bowl_predictive/index2.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./posts/cfb_bowl_predictive/index2.html"></a></p>
+</div>
 <div class="body">
 <a href="./posts/cfb_bowl_predictive/index2.html">
 <h3 class="no-anchor listing-title">
@@ -326,16 +503,38 @@ pRedictive models for CFB bowl season
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('college football'); return false;">
+college football
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
+</div>
+</div>
+<a href="./posts/cfb_bowl_predictive/index2.html">
+<div class="listing-description">
+<p>CFB model building</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/cfb_bowl_predictive/index2.html">
 <div class="listing-date">
 Dec 20, 2017
 </div>
+<div class="listing-reading-time">
+10 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="8" data-categories="R" data-listing-date-sort="1490500800000" data-listing-file-modified-sort="1678072111859" data-listing-reading-time-sort="9.54">
+<div class="thumbnail">
+<p><a href="./posts/getting_betteR/index.html"> <img src="./posts/getting_betteR/not_vector-1.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/getting_betteR/index.html">
 <h3 class="no-anchor listing-title">
@@ -345,16 +544,32 @@ Getting betteR
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+</div>
+<a href="./posts/getting_betteR/index.html">
+<div class="listing-description">
+<p>Documenting my slow learnings and improvements with R</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/getting_betteR/index.html">
 <div class="listing-date">
 Mar 26, 2017
 </div>
+<div class="listing-reading-time">
+9 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="9" data-categories="R,college football" data-listing-date-sort="1477713600000" data-listing-file-modified-sort="1678072823313" data-listing-reading-time-sort="36.705">
+<div class="thumbnail">
+<p><a href="./posts/clustering_cfb_offense/index.html"> <img src="./posts/clustering_cfb_offense/unnamed-chunk-3-1.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/clustering_cfb_offense/index.html">
 <h3 class="no-anchor listing-title">
@@ -364,16 +579,35 @@ Clustering CFB Offensive Styles
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('college football'); return false;">
+college football
+</div>
+</div>
+<a href="./posts/clustering_cfb_offense/index.html">
+<div class="listing-description">
+<p>CFB Styles of Play Analysis</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/clustering_cfb_offense/index.html">
 <div class="listing-date">
 Oct 29, 2016
 </div>
+<div class="listing-reading-time">
+36 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="10" data-categories="R,college baseball" data-listing-date-sort="1465963200000" data-listing-file-modified-sort="1678073195738" data-listing-reading-time-sort="8.725">
+<div class="thumbnail">
+<p><a href="./posts/tamu_baseball/index.html"> <img src="./posts/tamu_baseball/Blue_Bell_Pic_2.jpg" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/tamu_baseball/index.html">
 <h3 class="no-anchor listing-title">
@@ -383,16 +617,35 @@ TAMU BASEBALL
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('college baseball'); return false;">
+college baseball
+</div>
+</div>
+<a href="./posts/tamu_baseball/index.html">
+<div class="listing-description">
+<p>Texas A&amp;M and their powerful bats. Analysis on Texas A&amp;M Baseball 2015-2016 season</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/tamu_baseball/index.html">
 <div class="listing-date">
 Jun 15, 2016
 </div>
+<div class="listing-reading-time">
+8 min
+</div>
 </a>
 </div>
 </div>
 <div class="quarto-post image-right" data-index="11" data-categories="Shiny,R,college basketball,college baseball" data-listing-date-sort="1456981200000" data-listing-file-modified-sort="1678073317259" data-listing-reading-time-sort="1.175">
+<div class="thumbnail">
+<p><a href="./posts/march_madness/index.html"> <img src="./posts/march_madness/MarchMadness.jpg" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
 <a href="./posts/march_madness/index.html">
 <h3 class="no-anchor listing-title">
@@ -402,11 +655,33 @@ College Shiny Apps
 
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Shiny'); return false;">
+Shiny
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('college basketball'); return false;">
+college basketball
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('college baseball'); return false;">
+college baseball
+</div>
+</div>
+<a href="./posts/march_madness/index.html">
+<div class="listing-description">
+<p>Shiny apps visualizing March Madness/CWS</p>
+</div>
+</a>
 </div>
 <div class="metadata">
 <a href="./posts/march_madness/index.html">
 <div class="listing-date">
 Mar 3, 2016
+</div>
+<div class="listing-reading-time">
+1 min
 </div>
 </a>
 </div>

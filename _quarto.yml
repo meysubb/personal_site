@@ -9,12 +9,12 @@ website:
   description: "This is Meyappans personal Blog."
   navbar:
     right:
-      - text: About Me
-        href: about.qmd
       - text: Posts
-        href: index.qmd
+        href: posts.qmd
       - text: Projects
-        href: projects.qmd 
+        href: projects/index.qmd 
+      - text: About Me
+        href: index.qmd
       - icon: github
         href: https://github.com/meysubb
       - icon: twitter

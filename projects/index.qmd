@@ -4,7 +4,7 @@ subtitle: "Here is a list of projects I've worked on"
 draft: false
 listing:
     - id: posts-projects
-      contents: posts/projects/*.qmd
+      contents: "*/index.qmd"
       type: default
       fields: [image, date, title, subtitle, categories, author, reading-time]  
       sort: "date desc"
