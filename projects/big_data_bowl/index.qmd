@@ -1,0 +1,16 @@
+---
+title: "Illuminating the Defense"
+subtitle: "Team submission to the 2021 Big Data Bowl"
+author: 
+  - "Meyappan Subbaiah"
+date: "2021-01-07"
+categories: [BDB,NFL]
+---
+
+The 2021 Big Data Bowl challenged competitors to assess and evaluate defensive players using provided tracking data. Our team really enjoyed competing and were excited to be announced finalists!
+
+Team: Matthew Reyers, Dani Chu, Meyappan Subbaiah and Lucas Wu 
+
+ - [Submitted notebook](https://www.kaggle.com/code/msubbaiah/illuminating-the-defense)
+ - [Video](https://www.youtube.com/watch?v=d0gLNp7PvEk)
+ - [Code](https://github.com/mreyers/bdb_3)
