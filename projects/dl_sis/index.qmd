@@ -1,0 +1,15 @@
+---
+title: "Winning the WAR on Defense"
+subtitle: "Team submission to 2020 Sports Info Solutions"
+author: 
+  - "Meyappan Subbaiah"
+date: "2020-07-19"
+categories: [SIS,NFL]
+---
+
+The 2020 SIS competition was about identifying the most valuable positions on the defensive line position and how to value those positions accordingly. We really enjoyed participating in this compeition, and learnt a lot about different ways to think about the defensive line. 
+
+Team: Matthew Reyers, Dani Chu, Meyappan Subbaiah and Lucas Wu 
+
+- [Submitted presentation](https://github.com/meysubb/AnalyticsChallenge2020/blob/master/Submissions/meysubb%40gmail.com/Winning%20the%20WAR%20on%20Defense.pdf)
+

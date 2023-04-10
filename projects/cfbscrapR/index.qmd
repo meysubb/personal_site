@@ -18,3 +18,13 @@ Huge S/O to [CFB_Data](https://collegefootballdata.com/) for making college play
 
 -  [EPA/WPA Models Misc](https://github.com/meysubb/cfbscrapR-MISC)
 
+Here's a sample of some things I created with the package. 
+
+2021 WP from cfbscrapR.  
+
+![](wp_21_season.jpg)
+
+
+2020 WP from cfbscrapR
+
+![](wp_20_season.jpg)

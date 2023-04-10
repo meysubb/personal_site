@@ -14,3 +14,6 @@ Team: Matthew Reyers, Dani Chu, Meyappan Subbaiah and Lucas Wu
  - [Submitted notebook](https://www.kaggle.com/code/msubbaiah/illuminating-the-defense)
  - [Video](https://www.youtube.com/watch?v=d0gLNp7PvEk)
  - [Code](https://github.com/mreyers/bdb_3)
+
+
+ ![](value_chart.png)

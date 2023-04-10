@@ -3,6 +3,8 @@
     "listing": "/projects/index.html",
     "items": [
       "/projects/big_data_bowl/index.html",
+      "/projects/dl_sis/index.html",
+      "/projects/R_packages/index.html",
       "/projects/cfbscrapR/index.html"
     ]
   },
