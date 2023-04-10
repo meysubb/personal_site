@@ -1,0 +1,14 @@
+---
+title: "Projects"
+subtitle: "Here is a list of projects I've worked on"
+draft: false
+listing:
+    - id: posts-projects
+      contents: "*/index.qmd"
+      type: default
+      fields: [image, date, title, subtitle, categories, author, reading-time]  
+      sort: "date desc"
+      categories: unnumbered
+      sort-ui: true
+      filter-ui: true
+---
