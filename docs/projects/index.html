@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Meyappan Subbaiah - Archive</title>
+<title>Meyappan Subbaiah - Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,20 +63,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-posts-projects .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-posts-projects'] = new List('listing-posts-projects', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -115,7 +115,7 @@ ga('send', {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Meyappan Subbaiah</span>
     </a>
   </div>
@@ -125,15 +125,15 @@ ga('send', {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html">
+    <a class="nav-link" href="../posts.html">
  <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/index.html">
+    <a class="nav-link active" href="../projects/index.html" aria-current="page">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item compact">
@@ -153,16 +153,19 @@ ga('send', {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="BDB">BDB</div><div class="category" data-category="NFL">NFL</div><div class="category" data-category="R">R</div><div class="category" data-category="R-package">R-package</div><div class="category" data-category="SIS">SIS</div><div class="category" data-category="cfbscrapR">cfbscrapR</div></div></div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Archive</h1>
+<h1 class="title">Projects</h1>
+<p class="subtitle lead">Here is a list of projects I’ve worked on</p>
 </div>
 
 
@@ -181,232 +184,188 @@ ga('send', {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-default" id="listing-posts-projects">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-posts-projects-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts-projects'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Data Viz,R" data-listing-date-sort="1672549200000" data-listing-file-modified-sort="1678069865477" data-listing-reading-time-sort="0.335">
+<div class="quarto-post image-right" data-index="0" data-categories="BDB,NFL" data-listing-date-sort="1609995600000" data-listing-file-modified-sort="1681090836660" data-listing-reading-time-sort="0.235">
+<div class="thumbnail">
+<p><a href="../projects/big_data_bowl/index.html"> <img src="../projects/big_data_bowl/value_chart.png" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
-<a href="./posts/data_viz_portfolio/index.html">
+<a href="../projects/big_data_bowl/index.html">
 <h3 class="no-anchor listing-title">
-Data Viz Portfolio
+Illuminating the Defense
 </h3>
 <div class="listing-subtitle">
-
+Team submission to the 2021 Big Data Bowl
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('BDB'); return false;">
+BDB
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('NFL'); return false;">
+NFL
+</div>
+</div>
+<a href="../projects/big_data_bowl/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/data_viz_portfolio/index.html">
+<a href="../projects/big_data_bowl/index.html">
 <div class="listing-date">
-Jan 1, 2023
+Jan 7, 2021
+</div>
+<div class="listing-author">
+Meyappan Subbaiah
+</div>
+<div class="listing-reading-time">
+0 min
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="R,Python,Heroku" data-listing-date-sort="1552536000000" data-listing-file-modified-sort="1676916680111" data-listing-reading-time-sort="3.805">
+<div class="quarto-post image-right" data-index="1" data-categories="SIS,NFL" data-listing-date-sort="1595131200000" data-listing-file-modified-sort="1681091234848" data-listing-reading-time-sort="0.28">
+<div class="thumbnail">
+<a href="../projects/dl_sis/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="../projects/dl_sis/index.html"></a></p>
+</div>
 <div class="body">
-<a href="./posts/get-started-heroku/index.html">
+<a href="../projects/dl_sis/index.html">
 <h3 class="no-anchor listing-title">
-Heroku for Data
+Winning the WAR on Defense
 </h3>
 <div class="listing-subtitle">
-
+Team submission to 2020 Sports Info Solutions
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('SIS'); return false;">
+SIS
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('NFL'); return false;">
+NFL
+</div>
+</div>
+<a href="../projects/dl_sis/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/get-started-heroku/index.html">
+<a href="../projects/dl_sis/index.html">
 <div class="listing-date">
-Mar 14, 2019
+Jul 19, 2020
+</div>
+<div class="listing-author">
+Meyappan Subbaiah
+</div>
+<div class="listing-reading-time">
+0 min
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="college basketball,R" data-listing-date-sort="1541912400000" data-listing-file-modified-sort="1678069910461" data-listing-reading-time-sort="9.37">
+<div class="quarto-post image-right" data-index="2" data-categories="R,R-package" data-listing-date-sort="1577854800000" data-listing-file-modified-sort="1681090755919" data-listing-reading-time-sort="0.245">
+<div class="thumbnail">
+<a href="../projects/R_packages/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="../projects/R_packages/index.html"></a></p>
+</div>
 <div class="body">
-<a href="./posts/mid_major_stock_exchange/index.html">
+<a href="../projects/R_packages/index.html">
 <h3 class="no-anchor listing-title">
-Mid-Major Stock Exchange
+R package development
 </h3>
 <div class="listing-subtitle">
-
+R packages that I’ve developed or contributed too
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R-package'); return false;">
+R-package
+</div>
+</div>
+<a href="../projects/R_packages/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/mid_major_stock_exchange/index.html">
+<a href="../projects/R_packages/index.html">
 <div class="listing-date">
-Nov 11, 2018
+Jan 1, 2020
+</div>
+<div class="listing-author">
+Meyappan Subbaiah
+</div>
+<div class="listing-reading-time">
+0 min
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="college baseball,R,python" data-listing-date-sort="1518325200000" data-listing-file-modified-sort="1678071186228" data-listing-reading-time-sort="5.15">
+<div class="quarto-post image-right" data-index="3" data-categories="R,R-package,cfbscrapR" data-listing-date-sort="1564977600000" data-listing-file-modified-sort="1681091834901" data-listing-reading-time-sort="0.395">
+<div class="thumbnail">
+<p><a href="../projects/cfbscrapR/index.html"> <img src="../projects/cfbscrapR/wp_21_season.jpg" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
-<a href="./posts/sec_baseball_recap_2017/index.html">
+<a href="../projects/cfbscrapR/index.html">
 <h3 class="no-anchor listing-title">
-SEC Baseball 2017 Recap
+cfbscrapR
 </h3>
 <div class="listing-subtitle">
-
+College Football Data access package with built in EPA/WPA Models.
 </div>
 </a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R-package'); return false;">
+R-package
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('cfbscrapR'); return false;">
+cfbscrapR
+</div>
+</div>
+<a href="../projects/cfbscrapR/index.html"> </a>
 </div>
 <div class="metadata">
-<a href="./posts/sec_baseball_recap_2017/index.html">
+<a href="../projects/cfbscrapR/index.html">
 <div class="listing-date">
-Feb 11, 2018
+Aug 5, 2019
 </div>
-</a>
+<div class="listing-author">
+Meyappan Subbaiah
 </div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="R,Data Viz" data-listing-date-sort="1518325200000" data-listing-file-modified-sort="1678071595590" data-listing-reading-time-sort="4.81">
-<div class="body">
-<a href="./posts/weatheR/index.html">
-<h3 class="no-anchor listing-title">
-Tri-Cities, WA weatheR
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/weatheR/index.html">
-<div class="listing-date">
-Feb 11, 2018
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="R,college basketball" data-listing-date-sort="1515646800000" data-listing-file-modified-sort="1679265822122" data-listing-reading-time-sort="2.075">
-<div class="body">
-<a href="./posts/tamu_basketball/index.html">
-<h3 class="no-anchor listing-title">
-SEC non-conference play
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/tamu_basketball/index.html">
-<div class="listing-date">
-Jan 11, 2018
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="college football,R,python" data-listing-date-sort="1513746000000" data-listing-file-modified-sort="1678070480417" data-listing-reading-time-sort="8.575">
-<div class="body">
-<a href="./posts/cfb_bowl_predictive/index.html">
-<h3 class="no-anchor listing-title">
-2017 CFB Bowl Predictions
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/cfb_bowl_predictive/index.html">
-<div class="listing-date">
-Dec 20, 2017
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="college football,R,python" data-listing-date-sort="1513746000000" data-listing-file-modified-sort="1678070830808" data-listing-reading-time-sort="10.96">
-<div class="body">
-<a href="./posts/cfb_bowl_predictive/index2.html">
-<h3 class="no-anchor listing-title">
-pRedictive models for CFB bowl season
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/cfb_bowl_predictive/index2.html">
-<div class="listing-date">
-Dec 20, 2017
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="R" data-listing-date-sort="1490500800000" data-listing-file-modified-sort="1678072111859" data-listing-reading-time-sort="9.54">
-<div class="body">
-<a href="./posts/getting_betteR/index.html">
-<h3 class="no-anchor listing-title">
-Getting betteR
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/getting_betteR/index.html">
-<div class="listing-date">
-Mar 26, 2017
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="R,college football" data-listing-date-sort="1477713600000" data-listing-file-modified-sort="1678072823313" data-listing-reading-time-sort="36.705">
-<div class="body">
-<a href="./posts/clustering_cfb_offense/index.html">
-<h3 class="no-anchor listing-title">
-Clustering CFB Offensive Styles
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/clustering_cfb_offense/index.html">
-<div class="listing-date">
-Oct 29, 2016
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="R,college baseball" data-listing-date-sort="1465963200000" data-listing-file-modified-sort="1678073195738" data-listing-reading-time-sort="8.725">
-<div class="body">
-<a href="./posts/tamu_baseball/index.html">
-<h3 class="no-anchor listing-title">
-TAMU BASEBALL
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/tamu_baseball/index.html">
-<div class="listing-date">
-Jun 15, 2016
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="11" data-categories="Shiny,R,college basketball,college baseball" data-listing-date-sort="1456981200000" data-listing-file-modified-sort="1678073317259" data-listing-reading-time-sort="1.175">
-<div class="body">
-<a href="./posts/march_madness/index.html">
-<h3 class="no-anchor listing-title">
-College Shiny Apps
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/march_madness/index.html">
-<div class="listing-date">
-Mar 3, 2016
+<div class="listing-reading-time">
+0 min
 </div>
 </a>
 </div>

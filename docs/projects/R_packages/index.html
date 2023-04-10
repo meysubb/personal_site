@@ -7,10 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Meyappan Subbaiah">
-<meta name="dcterms.date" content="2016-03-03">
-<meta name="description" content="Shiny apps visualizing March Madness/CWS">
+<meta name="dcterms.date" content="2020-01-01">
 
-<title>Meyappan Subbaiah - College Shiny Apps</title>
+<title>Meyappan Subbaiah - R package development</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +78,7 @@ ga('send', {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -124,114 +123,56 @@ ga('send', {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">College Shiny Apps</h1>
-                  <div>
-        <div class="description">
-          Shiny apps visualizing March Madness/CWS
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">Shiny</div>
-                <div class="quarto-category">R</div>
-                <div class="quarto-category">college basketball</div>
-                <div class="quarto-category">college baseball</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Meyappan Subbaiah </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">March 3, 2016</p>
-      </div>
-    </div>
-    
-      <div>
-      <div class="quarto-title-meta-heading">Modified</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date-modified">April 3, 2019</p>
-      </div>
-    </div>
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#march-madness" id="toc-march-madness" class="nav-link active" data-scroll-target="#march-madness">March Madness</a>
-  <ul class="collapse">
-  <li><a href="#application-links" id="toc-application-links" class="nav-link" data-scroll-target="#application-links">Application Links</a></li>
-  <li><a href="#source-code---march-madness" id="toc-source-code---march-madness" class="nav-link" data-scroll-target="#source-code---march-madness">Source Code - March Madness</a></li>
-  </ul></li>
-  <li><a href="#college-world-series" id="toc-college-world-series" class="nav-link" data-scroll-target="#college-world-series">College World Series</a>
-  <ul class="collapse">
-  <li><a href="#application-link" id="toc-application-link" class="nav-link" data-scroll-target="#application-link">Application Link</a></li>
-  <li><a href="#source-code---cws" id="toc-source-code---cws" class="nav-link" data-scroll-target="#source-code---cws">Source Code - CWS</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">R package development</h1>
+<p class="subtitle lead">R packages that I’ve developed or contributed too</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">R-package</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
 
-<p>NCAA Shiny Apps</p>
-<section id="march-madness" class="level2">
-<h2 class="anchored" data-anchor-id="march-madness">March Madness</h2>
-<p>For those of you that love filling out NCAA brackets, have you ever struggled to fill out a bracket? Unless you religiously watch college basketball, there is a high chance that you haven’t seen every team play. It is even more difficult to predict matchups continuoulsy compare stats between set matchups and potential matchups.</p>
-<p>I wanted to avoid constantly jumping from website to website. So I went ahead and spent a little time developing an application, that allows team-team comparison for the tournament this year. This application has data for all tournament teams and will allow you to cross-compare teams and players.</p>
-<p>You can compare teams based on different stats, and even look at individual players or compare the team as a whole.</p>
-<p>2019/2018: Create a similarity index for teams too 2017: Data updated for games played until 3/15/2017.<br>
-2016: Additionally, I’ve got every team’s schedule (except for games played on 3/13/2016) and a separate tab that has a picture of the current bracket.</p>
-<section id="application-links" class="level3">
-<h3 class="anchored" data-anchor-id="application-links">Application Links</h3>
-<p><a href="https://meysubb.shinyapps.io/March_Madness_Dashboard/">2018-19: NCAA March Madness</a></p>
-<p><img src="march_viz_1.png" class="img-fluid"> <img src="march_viz_2.png" class="img-fluid"> <img src="march_viz_3.png" class="img-fluid"></p>
-<p><a href="https://meysubb.shinyapps.io/gameapp/">2017-18: NCAA March Madness</a><br>
-<a href="https://meysubb.shinyapps.io/2017_marchmadness/">2016-17: NCAA March Madness</a><br>
-<a href="https://meysubb.shinyapps.io/NCAAB/">2015-16: NCAA March Madness</a></p>
-<p>Note: Older versions are not hosted anymore, see github for code.</p>
-</section>
-<section id="source-code---march-madness" class="level3">
-<h3 class="anchored" data-anchor-id="source-code---march-madness">Source Code - March Madness</h3>
-<p><a href="https://github.com/meysubb/NCAAB_projects">Shiny Apps Source Code</a></p>
-</section>
-</section>
-<section id="college-world-series" class="level2">
-<h2 class="anchored" data-anchor-id="college-world-series">College World Series</h2>
-<section id="application-link" class="level3">
-<h3 class="anchored" data-anchor-id="application-link">Application Link</h3>
-<p><a href="https://meysubb.shinyapps.io/cws-d1/">2019 CWS App</a></p>
-<p><img src="cws_app.png" class="img-fluid"></p>
-</section>
-<section id="source-code---cws" class="level3">
-<h3 class="anchored" data-anchor-id="source-code---cws">Source Code - CWS</h3>
-<p><a href="https://github.com/meysubb/College_Baseball_Study/tree/master/2019/CWS_App">Shiny Apps Source Code</a></p>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Meyappan Subbaiah </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 1, 2020</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p>I use python too, don’t worry. But I developed and contributed to a few R packages. Always wanted to get my hands on more sports data, in general. :)</p>
+<p>Author<br>
+- <a href="https://github.com/meysubb/collegeballR">collegeballR</a><br>
+- <a href="https://github.com/meysubb/cfbscrapR-archived">cfbscrapR</a></p>
+<p>Contributor<br>
+- ncaahoopR<br>
+- fcscrapR</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

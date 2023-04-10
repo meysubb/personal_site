@@ -364,6 +364,41 @@
     "text": "TLDR\nSo in short, there is a time for base r, tidyverse, and even parallel processing. Hopefully, this post highlighted the performance improvement (from a time standpoint) when used correctly.\nI’ve hit on some R packages and features that you will find useful. As you can see, base R does a lot of things well. However when it comes to the harder data munging and cleaning tasks it falls short. At first I thought about using for loops, but quickly learned that I should rely on apply family of loops. Turns out some of the tasks I was trying to accomplish are easily handled by the tidyverse set of packages, specifically dplyr. I was a bit surprised that I had to rely on parallel processing to sort through the data and determine opponent statistics. It proved to be very time efficient and satisfied the computer nerd in me.\nI’m sure I will follow this post up again (in a year) detailing some other cool packages and features available in R. Data.table is on the docket of things to learn. Let me know if you have any other recommendations. Tweet at @msubbaiah1."
   },
   {
+    "objectID": "projects/R_packages/index.html",
+    "href": "projects/R_packages/index.html",
+    "title": "R package development",
+    "section": "",
+    "text": "I use python too, don’t worry. But I developed and contributed to a few R packages. Always wanted to get my hands on more sports data, in general. :)\nAuthor\n- collegeballR\n- cfbscrapR\nContributor\n- ncaahoopR\n- fcscrapR"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nIlluminating the Defense\n\n\nTeam submission to the 2021 Big Data Bowl\n\n\n\n\nBDB\n\n\nNFL\n\n\n \n\n\n\n\nJan 7, 2021\n\n\nMeyappan Subbaiah\n\n\n0 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWinning the WAR on Defense\n\n\nTeam submission to 2020 Sports Info Solutions\n\n\n\n\nSIS\n\n\nNFL\n\n\n \n\n\n\n\nJul 19, 2020\n\n\nMeyappan Subbaiah\n\n\n0 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR package development\n\n\nR packages that I’ve developed or contributed too\n\n\n\n\nR\n\n\nR-package\n\n\n \n\n\n\n\nJan 1, 2020\n\n\nMeyappan Subbaiah\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\ncfbscrapR\n\n\nCollege Football Data access package with built in EPA/WPA Models.\n\n\n\n\nR\n\n\nR-package\n\n\ncfbscrapR\n\n\n \n\n\n\n\nAug 5, 2019\n\n\nMeyappan Subbaiah\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/cfbscrapR/index.html",
+    "href": "projects/cfbscrapR/index.html",
+    "title": "cfbscrapR",
+    "section": "",
+    "text": "This project was inspired by my love for CFB, and also inspired by the EPA/WPA models provided in nflscrapR by Ron Yurko et al. \nThis package is now archived. Access to cfb data can be found in cfbfastR.\nHuge S/O to CFB_Data for making college play by play data accessible to everyone.\n\nArchived R Package\nEPA/WPA Models Misc\n\nHere’s a sample of some things I created with the package.\n2021 WP from cfbscrapR.\n\n2020 WP from cfbscrapR"
+  },
+  {
+    "objectID": "projects/big_data_bowl/index.html",
+    "href": "projects/big_data_bowl/index.html",
+    "title": "Illuminating the Defense",
+    "section": "",
+    "text": "The 2021 Big Data Bowl challenged competitors to assess and evaluate defensive players using provided tracking data. Our team really enjoyed competing and were excited to be announced finalists!\nTeam: Matthew Reyers, Dani Chu, Meyappan Subbaiah and Lucas Wu\n\nSubmitted notebook\nVideo\nCode"
+  },
+  {
+    "objectID": "projects/dl_sis/index.html",
+    "href": "projects/dl_sis/index.html",
+    "title": "Winning the WAR on Defense",
+    "section": "",
+    "text": "The 2020 SIS competition was about identifying the most valuable positions on the defensive line position and how to value those positions accordingly. We really enjoyed participating in this compeition, and learnt a lot about different ways to think about the defensive line.\nTeam: Matthew Reyers, Dani Chu, Meyappan Subbaiah and Lucas Wu\n\nSubmitted presentation"
+  },
+  {
     "objectID": "archive.html",
     "href": "archive.html",
     "title": "Archive",
@@ -373,15 +408,15 @@
   {
     "objectID": "index.html",
     "href": "index.html",
+    "title": "Meyappan",
+    "section": "",
+    "text": "I am currently a Data Scientist at the NFL.\nI graduated with a Master’s of Science in Business Analytics from UT, and previously a Master’s of Science in Nuclear Engineering from Texas A&M. My research was focused on nuclear proliferation actions by states in order to quantify the associated level of risk.\nAway from my keyboard, I enjoy basketball and pickleball. I’d also call myself a dosa and pizza entusiast."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
     "title": "Posts",
     "section": "",
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nData Viz Portfolio\n\n\n\n\n\n\n\nData Viz\n\n\nR\n\n\n\n\nJust a place to showcase and get better at data-viz\n\n\n\n\n\n\nJan 1, 2023\n\n\n0 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHeroku for Data\n\n\n\n\n\n\n\nR\n\n\nPython\n\n\nHeroku\n\n\n\n\nAutomate Tweets with Heroku\n\n\n\n\n\n\nMar 14, 2019\n\n\n3 min\n\n\n\n\n\n\n  \n\n\n\n\nMid-Major Stock Exchange\n\n\n\n\n\n\n\ncollege basketball\n\n\nR\n\n\n\n\nInvesting in CBB mid-major teams\n\n\n\n\n\n\nNov 11, 2018\n\n\n9 min\n\n\n\n\n\n\n  \n\n\n\n\nSEC Baseball 2017 Recap\n\n\n\n\n\n\n\ncollege baseball\n\n\nR\n\n\npython\n\n\n\n\nBreaking down the 2017 baseball season for SEC teams\n\n\n\n\n\n\nFeb 11, 2018\n\n\n5 min\n\n\n\n\n\n\n  \n\n\n\n\nTri-Cities, WA weatheR\n\n\n\n\n\n\n\nR\n\n\nData Viz\n\n\n\n\nWeather Viz in R\n\n\n\n\n\n\nFeb 11, 2018\n\n\n4 min\n\n\n\n\n\n\n  \n\n\n\n\nSEC non-conference play\n\n\n\n\n\n\n\nR\n\n\ncollege basketball\n\n\n\n\nLet’s take a look around the SEC and how everyone’s non-conference schedule played out\n\n\n\n\n\n\nJan 11, 2018\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n2017 CFB Bowl Predictions\n\n\n\n\n\n\n\ncollege football\n\n\nR\n\n\npython\n\n\n\n\nCFB Bowl Predictions\n\n\n\n\n\n\nDec 20, 2017\n\n\n8 min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npRedictive models for CFB bowl season\n\n\n\n\n\n\n\ncollege football\n\n\nR\n\n\npython\n\n\n\n\nCFB model building\n\n\n\n\n\n\nDec 20, 2017\n\n\n10 min\n\n\n\n\n\n\n  \n\n\n\n\nGetting betteR\n\n\n\n\n\n\n\nR\n\n\n\n\nDocumenting my slow learnings and improvements with R\n\n\n\n\n\n\nMar 26, 2017\n\n\n9 min\n\n\n\n\n\n\n  \n\n\n\n\nClustering CFB Offensive Styles\n\n\n\n\n\n\n\nR\n\n\ncollege football\n\n\n\n\nCFB Styles of Play Analysis\n\n\n\n\n\n\nOct 29, 2016\n\n\n36 min\n\n\n\n\n\n\n  \n\n\n\n\nTAMU BASEBALL\n\n\n\n\n\n\n\nR\n\n\ncollege baseball\n\n\n\n\nTexas A&M and their powerful bats. Analysis on Texas A&M Baseball 2015-2016 season\n\n\n\n\n\n\nJun 15, 2016\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\nCollege Shiny Apps\n\n\n\n\n\n\n\nShiny\n\n\nR\n\n\ncollege basketball\n\n\ncollege baseball\n\n\n\n\nShiny apps visualizing March Madness/CWS\n\n\n\n\n\n\nMar 3, 2016\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Meyappan",
-    "section": "",
-    "text": "About this blog"
   }
 ]

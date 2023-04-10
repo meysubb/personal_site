@@ -1,13 +1,23 @@
 ---
-title: "Posts"
-listing:
-  contents: posts/**/*.qmd
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  fields: [image, date, title, reading-time, description, categories]
-page-layout: full
-title-block-banner: false
+title: "Meyappan"
+subtitle: "Football Ops/Media Data Scientist    NFL"
+image: profile.jpg
+about:
+  template: trestles
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/msubbaiah1
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/msubbaiah/
+    - icon: github
+      text: Github
+      href: https://github.com/meysubb
 ---
+
+I am currently a Data Scientist at the NFL. 
+
+I graduated with a Master’s of Science in Business Analytics from UT, and previously a Master's of Science in Nuclear Engineering from Texas A&M. My research was focused on  nuclear proliferation actions by states in order to quantify the associated level of risk. 
+
+Away from my keyboard, I enjoy basketball and pickleball. I'd also call myself a dosa and pizza entusiast. 

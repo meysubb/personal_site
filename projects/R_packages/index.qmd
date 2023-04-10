@@ -1,0 +1,19 @@
+---
+title: "R package development"
+subtitle: "R packages that I've developed or contributed too"
+author: 
+  - "Meyappan Subbaiah"
+date: "2020-01-01"
+categories: [R, R-package]
+---
+
+I use python too, don't worry. But I developed and contributed to a few R packages. Always wanted to get my hands on more sports data, in general. :) 
+
+
+Author   
+- [collegeballR](https://github.com/meysubb/collegeballR)  
+- [cfbscrapR](https://github.com/meysubb/cfbscrapR-archived)  
+
+Contributor  
+- ncaahoopR   
+- fcscrapR   
